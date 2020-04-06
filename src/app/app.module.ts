@@ -9,13 +9,17 @@ import { AdminComponent } from './components/admin/admin.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ViewRegistrationComponent } from './components/view-registration/view-registration.component';
+import { CallbackComponent } from './components/callback/callback.component';
+import { AuthService } from './services/auth.service';
+import { AuthGuard } from './services/auth.guard';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
     HomeComponent,
-    ViewRegistrationComponent
+    ViewRegistrationComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,9 @@ import { ViewRegistrationComponent } from './components/view-registration/view-r
     ReactiveFormsModule
   ],
   providers: [
-    BikeService
+    BikeService,
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

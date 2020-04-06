@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 
-const httpOptions = {
+let httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
@@ -26,6 +26,9 @@ export class BikeService {
 
   getBikes(): Observable<boolean> {
 
+    let token = localStorage.getItem('access_token');
+    httpOptions.headers.append('Authorization', 'Bearer ' + token);
+
     return this.http.get('/server/api/v1/bikes', httpOptions)
       .pipe(map((data: any[]) => {
         this.Bikes = data;
@@ -34,6 +37,9 @@ export class BikeService {
   }
 
   getBikeById(id: string): Observable<boolean> {
+    let token = localStorage.getItem('access_token');
+    httpOptions.headers.append('Authorization', 'Bearer ' + token);
+    
     return this.http.get('/server/api/v1/bikes/' + id, httpOptions)
       .pipe(map((data: any) => {
         this.Bike = data;
