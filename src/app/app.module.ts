@@ -9,9 +9,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ViewRegistrationComponent } from './components/view-registration/view-registration.component';
-import { CallbackComponent } from './components/callback/callback.component';
-import { AuthService } from './services/auth.service';
-import { AuthGuard } from './services/auth.guard';
+// import { CallbackComponent } from './components/callback/callback.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +17,7 @@ import { AuthGuard } from './services/auth.guard';
     AdminComponent,
     HomeComponent,
     ViewRegistrationComponent,
-    CallbackComponent
+    // CallbackComponent
   ],
   imports: [
     BrowserModule,
@@ -29,8 +27,8 @@ import { AuthGuard } from './services/auth.guard';
   ],
   providers: [
     BikeService,
-    AuthService,
-    AuthGuard
+    // AuthService,
+    // AuthGuard
   ],
   bootstrap: [AppComponent]
 })

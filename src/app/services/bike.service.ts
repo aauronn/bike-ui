@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Bike } from '../models/bike.model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+// import { AuthService } from './auth.service';
 
 
 let httpOptions = {
@@ -25,9 +26,10 @@ export class BikeService {
   }
 
   getBikes(): Observable<boolean> {
-
+    
+    
     let token = localStorage.getItem('access_token');
-    httpOptions.headers.append('Authorization', 'Bearer ' + token);
+    // httpOptions.headers.append('Authorization', 'Bearer ' + token);
 
     return this.http.get('/server/api/v1/bikes', httpOptions)
       .pipe(map((data: any[]) => {
