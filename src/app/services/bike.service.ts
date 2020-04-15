@@ -39,8 +39,8 @@ export class BikeService {
   }
 
   getBikeById(id: string): Observable<boolean> {
-    let token = localStorage.getItem('access_token');
-    httpOptions.headers.append('Authorization', 'Bearer ' + token);
+    // let token = localStorage.getItem('access_token');
+    // httpOptions.headers.append('Authorization', 'Bearer ' + token);
     
     return this.http.get('/server/api/v1/bikes/' + id, httpOptions)
       .pipe(map((data: any) => {
