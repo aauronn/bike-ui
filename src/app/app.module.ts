@@ -9,6 +9,9 @@ import { AdminComponent } from './components/admin/admin.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ViewRegistrationComponent } from './components/view-registration/view-registration.component';
+import { CustomerListComponent } from './components/customer/customer-list/customer-list.component';
+import { CustomerService } from './services/customer.service';
+import { CustomerDetailComponent } from './components/customer/customer-detail/customer-detail.component';
 // import { CallbackComponent } from './components/callback/callback.component';
 
 @NgModule({
@@ -17,6 +20,8 @@ import { ViewRegistrationComponent } from './components/view-registration/view-r
     AdminComponent,
     HomeComponent,
     ViewRegistrationComponent,
+    CustomerListComponent,
+    CustomerDetailComponent,
     // CallbackComponent
   ],
   imports: [
@@ -27,6 +32,7 @@ import { ViewRegistrationComponent } from './components/view-registration/view-r
   ],
   providers: [
     BikeService,
+    CustomerService
     // AuthService,
     // AuthGuard
   ],
