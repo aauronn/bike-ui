@@ -27,7 +27,7 @@
     "cors": "^2.8.5",
     "express-http-proxy": "^1.6.0",
     "fast-json-patch": "^3.0.0-1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "popper.js": "^1.16.0",
